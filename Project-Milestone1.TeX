@@ -1,0 +1,58 @@
+\documentclass{article}
+\usepackage{graphicx} 
+\usepackage{amsmath}
+
+\title{Project Milestone 1}
+\author{
+K. Anjuli Jones (anjulij) 
+\\Matthew Dam (3clipseS)
+\\Daniel De Oliveira (danherbb)
+\\Carlos Vasquez
+}
+\date{15 February 2026}
+
+\begin{document}
+
+\maketitle
+
+\section*{Project}
+Group members (names, emails and GitHub accounts),
+Member Roles, Communication method, Project Gantt Chart (including internal deadlines and
+meetings), GitHub repository link, and solution to the three working examples.
+
+\section*{Milestone 1: Understanding the Problem}
+\subsection*{Problem 1}
+
+\subsection*{Problem 2}
+Work out the given numerical example for Problem-2. That is, You are given a matrix A of dimensions $ \times n$, where each element represents the predicted prices of m different stocks for n consecutive days. Additionally, you are given an integer $k (1 \leq k \leq n)$. Your task is to manually find a sequence of at most $k$ transactions, each involving the purchase and sale of a single stock, that yields the maximum profit. (Refer to problem statement - 2 for output format).
+
+\paragraph{Input Matrix A}
+
+\[
+A =
+\begin{bmatrix}
+    25 & 30 & 15 & 40 & 50 \\
+    10 & 20 & 30 & 25 & 5\\
+    30 & 45 & 35 & 10 & 15\\
+    5 & 50 & 35 & 25 & 45
+\end{bmatrix}
+\]
+\[k = 3\]
+
+\paragraph{Steps}
+\begin{enumerate}
+    \item  Begin with the input matrix A as provided.
+    \item Determine the sequence of at-most K non-overlapping transactions. A valid transaction is a buy-sell of the same stock. Different transactions can have different stocks, but one transaction would deal with only a single stock.
+    \item Output should be a sequence of at most K transactions in the format of $(i,j,l)$ that yields the maximum potential profit by selling ith stock on lth day that was bought on jth day.
+\end{enumerate}
+
+\subsubsection*{Notes}
+
+\begin{itemize}
+  \item This milestone involves manually applying the basic logic of calculating potential profits and selecting the optimal transaction for a single stock.
+\item The goal is to understand the foundational logic of finding the maximum profit for atmost K non-overlapping transactions by considering the price differences between different days for a specific
+stock (in a single transaction).
+\end{itemize}
+
+\subsection*{Problem 3}
+\end{document}
