@@ -25,6 +25,47 @@ GitHub Repository \href{https://github.com/anjulij/COP4533-Final-Project}{Link}
 \section*{Milestone 1: Understanding the Problem}
 \subsection*{Problem 1}
 
+\noindent \textbf{Step 1.} Input matrix A
+$$A = 
+\begin{bmatrix}
+    12 & 1 & 5 & 3 & 16 \\
+    4 & 4 & 13 & 4 & 9 \\
+    6 & 8 & 6 & 1 & 2 \\
+    14 & 3 & 4 & 8 & 10 \\
+\end{bmatrix}
+$$
+
+\medskip
+\noindent \textbf{Step 2.} Potential profit by selling on each day for each stock.
+
+\medskip
+Let $p_{i,j}$ be the potential profit of selling stock $i$ on day $j$. Then,
+\begin{itemize}
+	\item $p_{1,1} = 0$, $p_{1,2} = 0$, $p_{1,3} = 4$, $p_{1,4} = 2$, $p_{1,5} = 15$
+	\item $p_{2,1} = 0$, $p_{2,2} = 0$, $p_{2,3} = 9$, $p_{2,4} = 0$, $p_{2,5} = 5$
+	\item $p_{3,1} = 0$, $p_{3,2} = 2$, $p_{3,3} = 0$, $p_{3,4} = 0$, $p_{3,5} = 1$
+	\item $p_{4,1} = 0$, $p_{4,2} = 0$, $p_{4,3} = 1$, $p_{4,4} = 5$, $p_{4,5} = 7$
+\end{itemize}
+
+\medskip
+\noindent \textbf{Step 3.} Identify the day with the highest potential profit for each stock.
+
+\medskip
+Based on the calculated values for $p_{i,j}$ in the previous step,
+\begin{itemize}
+    \item $max_{j}p_{1,j} = 15$, on day $5$
+    \item $max_{j}p_{2,j} = 9$, on day $3$
+    \item $max_{j}p_{3,j} = 2$, on day $2$
+    \item $max_{j}p_{4,j} = 7$, on day $5$
+\end{itemize}
+
+\medskip
+\noindent \textbf{Step 4.} Determine the stock and day combination that yields the maximum potential profit.
+
+\medskip
+Based on step 3, the maximum potential profit is $15$ and is obtained by selling the first stock on the fifth day. The stock would be bought on the second day, therefore the output for this example would be
+$$(1, 2, 5, 15)$$
+
 \subsection*{Problem 2}
 Work out the given numerical example for Problem-2. That is, You are given a matrix A of dimensions $ \times n$, where each element represents the predicted prices of m different stocks for n consecutive days. Additionally, you are given an integer $k (1 \leq k \leq n)$. Your task is to manually find a sequence of at most $k$ transactions, each involving the purchase and sale of a single stock, that yields the maximum profit. (Refer to problem statement - 2 for output format).
 
