@@ -6,7 +6,7 @@
 \title{Project Milestone 1}
 \author{
 K. Anjuli Jones (anjulij) 
-\\Matthew Dam (3clipseS)
+Matthew Dam (3clipseS)
 \\Daniel De Oliveira (danherbb)
 \\Carlos Vasquez
 }
@@ -98,4 +98,74 @@ stock (in a single transaction).
 \end{itemize}
 
 \subsection*{Problem 3}
+\[
+A =
+\begin{bmatrix}
+    7 & 1 & 5 & 3 & 6 & 8 & 9 \\
+    2 & 4 & 3 & 7 & 9 & 1 & 8 \\
+    5 & 8 & 9 & 1 & 2 & 3 & 10 \\
+    9 & 3 & 4 & 8 & 7 & 4 & 1 \\
+    3 & 1 & 5 & 8 & 9 & 6 & 4
+\end{bmatrix}
+\]
+\[c = 2\]
+\medskip
+\noindent \textbf{Step 1.}  Begin with the input matrix A and integer c as provided
+
+\medskip
+\noindent \textbf{Step 2.} For each day $j$, identify the maximum price to sell the stock $\ell$. 
+You can only buy another stock after $c + 1$ days (i.e., on day $\ell + c + 1$ or later).
+
+\medskip
+Let $i$ = stock number; $j$ = buy day; $\ell$ = sale day.
+
+\medskip
+\textbf{1 Buy 1 Sell Combinations}
+
+\[
+\begin{aligned}
+(1,2,7) &:\quad profit = 8 \\
+(2,6,7) &:\quad profit = 7 \\
+(3,4,7) &:\quad profit = 9 \\
+(4,2,4) &:\quad profit = 5 \\
+(5,2,5) &:\quad profit = 8 \\
+\vdots
+\end{aligned}
+\]
+
+\medskip
+\textbf{2 Buy 2 Sell Combinations}
+
+\[
+\begin{aligned}
+(1,1,2), (1,5,7) &:\quad profit = -3 \\
+(2,1,2), (2,6,7) &:\quad profit = 5 \\
+(3,1,2), (3,5,7) &:\quad profit = 11 \\
+(4,1,2), (4,6,7) &:\quad profit = -9 \\
+(5,1,2), (5,6,7) &:\quad profit = -4 \\
+\vdots
+\end{aligned}
+\]
+
+\[
+\begin{aligned}
+(1,2,3), (1,6,7) &:\quad profit = 5 \\
+(2,1,3), (2,6,7) &:\quad profit = 8 \\
+(3,1,3), (3,6,7) &:\quad profit = 11 \\
+(4,2,3), (4,6,7) &:\quad profit = -2 \\
+(5,2,3), (5,6,7) &:\quad profit = 2 \\
+\vdots
+\end{aligned}
+\]
+
+\medskip
+\noindent \textbf{Step 3.} Determine the sequence (i,j,l) that yields the maximum potential profit by selling ith stock on lth day that was bought on jth day.
+
+\medskip
+Maximum profit found is 11. Therefore, the sequences that yields the maximum potential profit are
+\[
+\left[(3,1,3),(3,6,7)\right]
+\quad \text{and} \quad
+\left[(3,1,2),(3,5,7)\right].
+\]
 \end{document}
