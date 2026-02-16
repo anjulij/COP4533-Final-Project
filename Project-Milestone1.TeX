@@ -93,33 +93,6 @@ Return a sequence of tuples $(i, j_1, j_2)$ representing the transactions where:
     \item If no profitable transaction is possible, return an empty sequence. If there are multiples sequences achieving the same optimal profit, return any one of them.
 \end{itemize}
 
-\subsubsection*{Example:}
-
-\paragraph{Input:}
-\[
-A =
-\begin{bmatrix}
-    7 & 1 & 5 & 3 & 6 \\
-    2 & 9 & 3 & 7 & 9\\
-    5 & 8 & 9 & 1 & 6\\
-    9 & 3 & 4 & 8 & 7
-\end{bmatrix}
-\]
-\[k = 3\]
-
-\paragraph{Output:}
-\[ [(2, 1, 2), (1, 2, 3), (2, 3, 5)] \]
-
-\paragraph{Explanation}
-
-Performing at most 3 transactions, selling the 2nd stock on the 2nd day after buying on
-1st day, 1st stock selling on the 3rd day buying on 2nd day, 2nd stock selling on 5th day buying on 3rd day yields the maximum profit of 17 (transaction 1: $9 - 2 = 7$, transaction 2: $5 - 1 = 4$, transaction 3: $9 - 3 = 6$). 
-
-\paragraph{Note:} 
-In each transaction tuple $(i, j_1, j_2)$, the buy day $j_1$ is strictly less than the sell day $j_2$. However, when comparing different transactions, we do not consider them overlapping as along as the actual days involved do not conflict. For example, $(1,2)$ and $(2,3)$ are not considered as overlapping because the sell day of the first is the same as the buy day of the second. Similarly, $(2,3)$ and $(3,5)$ are valid together. But if it is $(2,4)$ and $(3,5)$, then we consider them as overlapping.
-
-Work out the given numerical example for Problem-2. That is, you are given a matrix A of dimensions $m \times n$, where each element represents the predicted prices of m different stocks for n consecutive days. Additionally, you are given an integer $k (1 \leq k \leq n)$. Your task is to manually find a sequence of at most $k$ transactions, each involving the purchase and sale of a single stock, that yields the maximum profit.
-
 \paragraph{Input Matrix A}
 
 \[
@@ -182,8 +155,8 @@ Maximum profits for stock 1
     \item Buy $[Stock_2, Day_2] = 20$, Sell $[Stock_2, Day_4] = 25$, profit = 5
     \item Buy $[Stock_2, Day_2] = 20$, Sell $[Stock_2, Day_5] = 5$, profit = loss
 
-    \item Buy $Stock_2, Day_3 = 30$, Sell $Stock_2, Day_4 = 25$, profit = loss
-    \item Buy $Stock_2, Day_3 = 30$, Sell $Stock_2, Day_5 = 5$, profit = loss
+    \item Buy $[Stock_2, Day_3] = 30$, Sell $Stock_2, Day_4 = 25$, profit = loss
+    \item Buy $[Stock_2, Day_3] = 30$, Sell $Stock_2, Day_5 = 5$, profit = loss
 
     \item $Stock_2, Day_4 = 25$, Sell $Stock_2, Day_5 = 5$, profit = loss
 \end{enumerate}
@@ -217,7 +190,7 @@ Maximum profits for stock 3
 \begin{enumerate}
     \item Buy $[Stock_3, Day_1] = 30$, Sell $[Stock_3, Day_2] = 45$, profit = 15
     \item Buy $[Stock_3, Day_1] = 30$, Sell $[Stock_3, Day_3] = 35$, profit = 5
-    \item Buy $[Stock_3, Day_4] = 10$, Sell $[Stock_1, Day_5] = 15$, profit = 5
+    \item Buy $[Stock_3, Day_4] = 10$, Sell $[Stock_3, Day_5] = 15$, profit = 5
 \end{enumerate}
 
 \noindent \textbf{Stock 4}
@@ -231,10 +204,10 @@ Maximum profits for stock 3
     \item Buy $[Stock_4, Day_2] = 50$, Sell $[Stock_4, Day_4] = 25$, profit = loss
     \item Buy $[Stock_4, Day_2] = 50$, Sell $[Stock_4, Day_5] = 45$, profit = loss
 
-    \item Buy $Stock_4, Day_3 = 35$, Sell $Stock_4, Day_4 = 25$, profit =  loss
-    \item Buy $Stock_4, Day_3 = 35$, Sell $Stock_4, Day_5 = 45$, profit =  10
+    \item Buy $[Stock_4, Day_3] = 35$, Sell $[Stock_4, Day_4] = 25$, profit =  loss
+    \item Buy $[Stock_4, Day_3] = 35$, Sell $[Stock_4, Day_5] = 45$, profit =  10
 
-    \item Buy $Stock_4, Day_4 = 25$, Sell $Stock_4, Day_5 = 45$, profit = 20
+    \item Buy $[Stock_4, Day_4] = 25$, Sell $[Stock_4, Day_5] = 45$, profit = 20
 \end{enumerate}
 Maximum profits for stock 4
 \begin{enumerate}
@@ -242,17 +215,15 @@ Maximum profits for stock 4
      \item Buy $[Stock_4, Day_1] = 5$, Sell $[Stock_4, Day_5] = 45$, profit = 40
      \item Buy $[Stock_4, Day_1] = 5$, Sell $[Stock_4, Day_3] = 35$, profit = 30
      \item Buy $[Stock_4, Day_1] = 5$, Sell $[Stock_4, Day_4] = 25$, profit = 20
-    \item Buy $Stock_4, Day_4 = 25$, Sell $Stock_4, Day_5 = 45$, profit = 20
-    \item Buy $Stock_4, Day_3 = 35$, Sell $Stock_4, Day_5 = 45$, profit =  10
-    \item Buy $[Stock_2, Day_2] = 20$, Sell $[Stock_2, Day_3] = 30$, profit = 10
-    \item Buy $[Stock_2, Day_2] = 20$, Sell $[Stock_2, Day_4] = 25$, profit = 5
+    \item Buy $[Stock_4, Day_4] = 25$, Sell $[Stock_4, Day_5] = 45$, profit = 20
+    \item Buy $[Stock_4, Day_3] = 35$, Sell $[Stock_4, Day_5] = 45$, profit =  10
 \end{enumerate}
 
 \paragraph{Step 3.} Output should be a sequence of at most k transactions in the format of $(i,j,l)$ that yields the maximum potential profit by selling ith stock on lth day that was bought on jth day.
 
 \medskip
 \begin{enumerate}
-    \item We start with our largest profit: Buy $[Stock_4, Day_1] = 5$, Sell $[Stock_4, Day_2] = 50$, profit = 45. (4,1,2)
+    \item Using a greedy approach we start with our largest profit: Buy $[Stock_4, Day_1] = 5$, Sell $[Stock_4, Day_2] = 50$, profit = 45. (4,1,2)
     \item We then find our next largest non-overlapping profit by eliminating all options that include Day 1 as the buying day. Buy $[Stock_1, Day_3] = 15$, Sell $[Stock_1, Day_5] = 50$, profit = 35. (1, 3, 5)
     \item We then find our third and last largest non-overlapping profit by eliminating all options that including day 1 and 3 as the buying day and Stock 4 and 1. Buy $[Stock_2, Day_2] = 20$, Sell $[Stock_2, Day_3] = 30$, profit = 10. (2, 2, 3) 
 \end{enumerate}

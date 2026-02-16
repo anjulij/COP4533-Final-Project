@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  15 FEB 2026 23:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  15 FEB 2026 23:19
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -295,17 +295,15 @@ Package hyperref Info: Link coloring OFF on input line 15.
 [4]
 
 [5]
-Overfull \hbox (15.97539pt too wide) in paragraph at lines 255--256
-[]\OT1/cmr/m/n/10 We start with our largest profit: Buy $[\OML/cmm/m/it/10 Stock[]; Day[]\OT1/cmr/m/n/10 ] = 5$, Sell $[\OML/cmm/m/it/10 Stock[]; Day[]\OT1/cmr/m/n/10 ] =
+Overfull \hbox (16.7797pt too wide) in paragraph at lines 226--227
+[]\OT1/cmr/m/n/10 Using a greedy ap-proach we start with our largest profit: Buy $[\OML/cmm/m/it/10 Stock[]; Day[]\OT1/cmr/m/n/10 ] =
  []
 
 
 
 [6]
 
-[7]
-
-[8] (./Project-Milestone1.aux)
+[7] (./Project-Milestone1.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
@@ -314,18 +312,18 @@ Package rerunfilecheck Info: File `Project-Milestone1.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 9771 strings out of 473190
- 150052 string characters out of 5715801
- 560936 words of memory out of 5000000
+ 9763 strings out of 473190
+ 149977 string characters out of 5715801
+ 561936 words of memory out of 5000000
  32835 multiletter control sequences out of 15000+600000
  564555 words of font info for 56 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,8n,79p,618b,529s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,8n,79p,461b,523s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on Project-Milestone1.pdf (8 pages, 143407 bytes).
+Output written on Project-Milestone1.pdf (7 pages, 140840 bytes).
 PDF statistics:
- 204 PDF objects out of 1000 (max. 8388607)
- 170 compressed objects within 2 object streams
- 92 named destinations out of 1000 (max. 500000)
+ 191 PDF objects out of 1000 (max. 8388607)
+ 158 compressed objects within 2 object streams
+ 84 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
